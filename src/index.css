@@ -635,35 +635,208 @@ a {
   max-width: 32rem;
 }
 
-.leadership-list {
-  border-top: 1px solid var(--color-line);
+.beyond-classroom-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 4rem;
 }
 
-.leadership-item {
-  display: grid;
-  grid-template-columns: 3rem minmax(0, 1fr) minmax(12rem, 0.65fr);
-  gap: 1.5rem;
-  align-items: baseline;
-  border-bottom: 1px solid var(--color-line);
-  padding: 1.35rem 0;
+.beyond-classroom-subtitle {
+  max-width: 35rem;
+  margin: 1.25rem 0 0;
+  color: var(--color-ink-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
 }
 
-.leadership-index,
-.leadership-item > span:last-child {
+.beyond-classroom-stat {
+  flex: 0 0 auto;
+  margin: 0 0 0.35rem;
   color: var(--color-ink-subtle);
   font-family: var(--font-code);
-  font-size: 0.68rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
 }
 
-.leadership-item strong {
+.activity-year-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 auto 2rem;
+}
+
+.activity-year-button {
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  padding: 0.55rem 0.85rem;
+  color: var(--color-ink-subtle);
+  background: transparent;
+  font-family: var(--font-code);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease;
+}
+
+.activity-year-button:hover,
+.activity-year-button:focus-visible,
+.activity-year-button-active {
+  border-color: var(--color-accent);
+  color: var(--color-canvas);
+  background: var(--color-accent);
+}
+
+.activity-year-button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.activity-path-stage {
+  position: relative;
+  display: grid;
+  gap: 0.8rem;
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.activity-curved-path {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.activity-path-track,
+.activity-path-progress {
+  fill: none;
+  stroke-width: 1.1;
+  vector-effect: non-scaling-stroke;
+}
+
+.activity-path-track {
+  stroke: rgba(196, 220, 214, 0.28);
+}
+
+.activity-path-progress {
+  stroke: var(--color-accent);
+  opacity: 0.72;
+}
+
+.activity-item {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 3rem minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: center;
+  min-width: 0;
+  min-height: 11rem;
+  padding: 1rem 0;
+}
+
+.activity-item-left .activity-content {
+  grid-column: 1;
+  text-align: right;
+}
+
+.activity-item-right .activity-content {
+  grid-column: 3;
+  text-align: left;
+}
+
+.activity-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 0.65rem;
+  height: 0.65rem;
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  background: var(--color-canvas);
+  box-shadow: 0 0 0 0.28rem var(--color-accent-soft);
+  transform: translate(-50%, -50%);
+  transition: background-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+}
+
+.activity-node-active {
+  background: var(--color-accent);
+  box-shadow: 0 0 0 0.4rem var(--color-accent-soft);
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.activity-item:hover .activity-content {
+  transform: translateX(3px);
+}
+
+.activity-item-left:hover .activity-content {
+  transform: translateX(-3px);
+}
+
+.activity-date {
+  margin-bottom: 0.5rem;
+  color: var(--color-ink-subtle);
+  font-family: var(--font-code);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.activity-index {
+  display: block;
+  margin-bottom: 1.2rem;
+  color: var(--color-ink-subtle);
+  font-family: var(--font-code);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.activity-index-active {
+  color: var(--color-accent);
+}
+
+.activity-content h3 {
+  margin: 0;
   color: var(--color-ink);
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  letter-spacing: -0.035em;
 }
 
-.leadership-item > span:last-child {
+.activity-result,
+.activity-role {
+  margin: 0.35rem 0 0;
+  color: var(--color-accent);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.activity-secondary,
+.activity-description {
+  margin: 0.35rem 0 0;
   color: var(--color-ink-muted);
+  font-size: 0.78rem;
   line-height: 1.6;
+}
+
+.activity-description {
+  font-size: 0.82rem;
+}
+
+.activity-category {
+  display: inline-block;
+  margin-top: 0.65rem;
+  color: var(--color-ink-subtle);
+  font-family: var(--font-code);
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .github-copy p {
@@ -829,13 +1002,58 @@ a {
     display: grid;
   }
 
-  .leadership-item {
-    grid-template-columns: 2rem minmax(0, 1fr);
-    gap: 0.75rem 1rem;
+  .beyond-classroom-header {
+    display: block;
+    margin-bottom: 3rem;
   }
 
-  .leadership-item > span:last-child {
+  .beyond-classroom-stat {
+    margin-top: 1.25rem;
+  }
+
+  .activity-path-stage {
+    padding-left: 1.75rem;
+  }
+
+  .activity-curved-path {
+    left: 0.35rem;
+    width: 1.5rem;
+    height: 100%;
+  }
+
+  .activity-path-base {
+    d: path('M50 0 C35 100 65 180 50 300 S35 500 50 650 S65 800 50 900');
+  }
+
+  .activity-item,
+  .activity-item-left,
+  .activity-item-right {
+    display: grid;
+    grid-template-columns: 1rem minmax(0, 1fr);
+    gap: 0.75rem;
+    min-height: 0;
+    padding: 1.25rem 0;
+  }
+
+  .activity-node {
+    top: 1.7rem;
+    left: -1.4rem;
+    transform: translate(-50%, 0);
+  }
+
+  .activity-node-active {
+    transform: translate(-50%, 0) scale(1.15);
+  }
+
+  .activity-item-left .activity-content,
+  .activity-item-right .activity-content {
     grid-column: 2;
+    text-align: left;
+  }
+
+  .activity-item:hover .activity-content,
+  .activity-item-left:hover .activity-content {
+    transform: none;
   }
 
   .footer-layout {
@@ -861,7 +1079,15 @@ a {
 
   .project-title,
   .project-link,
-  .project-item {
+  .project-item,
+  .activity-content {
+    transition: none;
+  }
+
+  .activity-item,
+  .activity-year-button,
+  .activity-content,
+  .activity-node {
     transition: none;
   }
 }

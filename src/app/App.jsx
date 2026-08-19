@@ -6,7 +6,7 @@ import ProjectsSection from '../sections/ProjectsSection'
 import SkillsSection from '../sections/SkillsSection'
 import ContactSection from '../sections/ContactSection'
 import EducationSection from '../sections/EducationSection'
-import LeadershipSection from '../sections/LeadershipSection'
+import BeyondClassroomSection from '../sections/BeyondClassroomSection'
 import GithubSection from '../sections/GithubSection'
 import SiteFooter from '../components/layout/SiteFooter'
 
@@ -22,7 +22,7 @@ function App() {
           <ProjectsSection />
           <SkillsSection />
           <EducationSection />
-          <LeadershipSection />
+          <BeyondClassroomSection />
           <GithubSection />
           <ContactSection />
         </main>
