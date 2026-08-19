@@ -3,6 +3,7 @@ export const navigationItems = [
   { label: 'Projects', href: '#projects' },
   { label: 'Skills', href: '#skills' },
   { label: 'Education', href: '#education' },
+  { label: 'Leadership', href: '#leadership' },
   { label: 'GitHub', href: '#github' },
   { label: 'Contact', href: '#contact' },
 ]

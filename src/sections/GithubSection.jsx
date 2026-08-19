@@ -14,7 +14,7 @@ function GithubSection() {
         <div className="github-layout">
           <div>
             <motion.p className="section-kicker" initial={initial} whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={heroReveal} transition={heroTransition}>
-              06 / GitHub activity
+              07 / GitHub activity
             </motion.p>
             <motion.h2 className="section-title" id="github-title" initial={initial} whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={heroReveal} transition={{ ...heroTransition, delay: 0.08 }}>
               Follow the work in public.

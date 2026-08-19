@@ -521,7 +521,6 @@ a {
   border-bottom: 0;
 }
 
-.education-layout,
 .github-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(18rem, 1fr);
@@ -529,91 +528,142 @@ a {
   align-items: start;
 }
 
-.education-primary h3 {
-  margin: 0.65rem 0 0.75rem;
-  color: var(--color-ink);
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-  letter-spacing: -0.04em;
-}
-
-.education-primary > p:last-child {
-  margin: 0;
-  color: var(--color-ink-muted);
-  line-height: 1.7;
-}
-
-.education-facts {
+.education-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+  align-items: stretch;
 }
 
-.education-facts > div {
-  border-top: 1px solid var(--color-line-strong);
-  padding-top: 1rem;
+.education-card {
+  display: flex;
+  min-width: 0;
+  min-height: 30rem;
+  flex-direction: column;
+  border: 1px solid var(--color-line);
+  border-radius: 0.5rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: rgba(16, 21, 28, 0.62);
 }
 
-.education-records {
-  grid-column: 1 / -1;
-}
-
-.education-records ul {
-  display: grid;
-  gap: 0.65rem;
-  margin: 0.9rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.education-records li {
-  color: var(--color-ink-muted);
-  font-size: 0.85rem;
-  line-height: 1.6;
-}
-
-.education-facts strong,
-.education-facts span {
+.education-number {
   display: block;
+  color: var(--color-accent);
+  font-family: var(--font-code);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
 }
 
-.education-facts strong {
-  color: var(--color-ink);
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.education-facts span {
-  margin-top: 0.4rem;
+.education-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
   color: var(--color-ink-subtle);
   font-family: var(--font-code);
   font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.education-facts ul {
-  grid-column: 1 / -1;
-  display: grid;
-  gap: 0.75rem;
-  margin: 1rem 0 0;
-  padding: 1rem 0 0;
-  border-top: 1px solid var(--color-line);
-  list-style: none;
+.education-card h3 {
+  margin: 3rem 0 0.55rem;
+  color: var(--color-ink);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  letter-spacing: -0.045em;
+  line-height: 1.05;
 }
 
-.education-facts li {
-  color: var(--color-ink-muted);
-  font-size: 0.85rem;
+.education-qualification,
+.education-examination {
+  margin: 0;
+  color: var(--color-ink);
+  font-size: 1rem;
+  font-weight: 600;
   line-height: 1.6;
 }
 
-.education-facts li::before {
-  margin-right: 0.65rem;
-  color: var(--color-accent);
-  content: '/';
+.education-examination {
+  color: var(--color-ink-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.education-description {
+  max-width: 42rem;
+  margin: 1.25rem 0 0;
+  color: var(--color-ink-muted);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.education-achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+}
+
+.education-achievements span {
+  border-left: 2px solid var(--color-accent);
+  padding: 0.65rem 0.8rem;
+  color: var(--color-ink);
+  background: var(--color-accent-soft);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.education-subjects {
+  max-width: 48rem;
+  margin: 1.5rem 0 0;
+  color: var(--color-ink-subtle);
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+.education-subjects span {
+  margin-right: 0.6rem;
+  color: var(--color-ink-muted);
   font-family: var(--font-code);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .github-copy {
   max-width: 32rem;
+}
+
+.leadership-list {
+  border-top: 1px solid var(--color-line);
+}
+
+.leadership-item {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr) minmax(12rem, 0.65fr);
+  gap: 1.5rem;
+  align-items: baseline;
+  border-bottom: 1px solid var(--color-line);
+  padding: 1.35rem 0;
+}
+
+.leadership-index,
+.leadership-item > span:last-child {
+  color: var(--color-ink-subtle);
+  font-family: var(--font-code);
+  font-size: 0.68rem;
+}
+
+.leadership-item strong {
+  color: var(--color-ink);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.leadership-item > span:last-child {
+  color: var(--color-ink-muted);
+  line-height: 1.6;
 }
 
 .github-copy p {
@@ -735,7 +785,6 @@ a {
   .section-intro,
   .about-layout,
   .contact-layout,
-  .education-layout,
   .github-layout {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -768,8 +817,25 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .education-facts {
+  .education-grid {
     grid-template-columns: 1fr;
+  }
+
+  .education-card {
+    min-height: 0;
+  }
+
+  .education-card-meta {
+    display: grid;
+  }
+
+  .leadership-item {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.75rem 1rem;
+  }
+
+  .leadership-item > span:last-child {
+    grid-column: 2;
   }
 
   .footer-layout {
