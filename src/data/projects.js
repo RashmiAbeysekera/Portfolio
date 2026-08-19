@@ -9,8 +9,8 @@ export const projects = [
       'Built the React and Tailwind CSS admin dashboard, including JWT login, role-based authorization, user management, analytics, and Axios integration with Django REST APIs.',
     features: ['JWT-secured login', 'Role-based authorization', 'User search and filtering', 'Storage-usage analytics'],
     technologies: ['React.js', 'Tailwind CSS', 'Django REST Framework', 'JWT'],
-    githubUrl: 'https://github.com/RashmiAbeysekera',
-    githubLabel: 'GitHub profile',
+    githubUrl: 'https://github.com/chirath1231/Software-Project-Storage-Solution',
+    githubLabel: 'GitHub repository',
   },
   {
     number: '02',
@@ -22,8 +22,8 @@ export const projects = [
       'Architected and built the citizen SOS evidence pipeline, validated upload flow, Supabase security policies, live incident feed, and photo/audio evidence viewer.',
     features: ['Evidence uploads', 'Row-level security', 'Realtime incident feed', 'Photo and audio lightbox'],
     technologies: ['Next.js', 'React', 'Supabase Storage', 'Supabase Realtime'],
-    githubUrl: 'https://github.com/RashmiAbeysekera',
-    githubLabel: 'GitHub profile',
+    githubUrl: 'https://github.com/Sahas-sass/ResQAI-web',
+    githubLabel: 'GitHub repository',
   },
   {
     number: '03',
@@ -35,7 +35,7 @@ export const projects = [
       'Built the full-stack application with JWT authentication, responsive Tailwind CSS UI, live product search, filters, shopping cart, and installable offline-capable behavior.',
     features: ['Installable PWA', 'JWT authentication', 'Live product search', 'Shopping cart'],
     technologies: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'PWA'],
-    githubUrl: 'https://github.com/RashmiAbeysekera',
-    githubLabel: 'GitHub profile',
+    githubUrl: 'https://github.com/RashmiAbeysekera/Skin-care-Project-MERN-PWA',
+    githubLabel: 'GitHub repository',
   },
 ]
