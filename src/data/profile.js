@@ -17,4 +17,6 @@ export const profile = {
     'Web Development',
   ],
   githubUrl: 'https://github.com/RashmiAbeysekera',
+  email: 'rashmiabeysekera3@gmail.com',
+  linkedinUrl: 'https://www.linkedin.com/in/rashmi-abeysekera-a27444296/',
 }

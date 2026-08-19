@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'motion/react'
 import { useEffect, useState } from 'react'
+import portrait from '../assets/rashmi-portrait.jpg'
 import PageContainer from '../components/layout/PageContainer'
 import { heroReveal, heroTransition } from '../animations/motionPresets'
 import { profile } from '../data/profile'
@@ -129,6 +130,21 @@ function HeroSection() {
             transition={{ ...heroTransition, delay: 0.35 }}
             aria-label="Technical focus areas"
           >
+            <figure className="hero-portrait">
+              <img
+                className="hero-portrait-image"
+                src={portrait}
+                alt="Rashmi Abeysekera"
+                width="600"
+                height="800"
+                fetchPriority="high"
+                decoding="async"
+              />
+              <figcaption>
+                <span>Rashmi Abeysekera</span>
+                <span>IT undergraduate · UoM</span>
+              </figcaption>
+            </figure>
             <div className="flex items-center justify-between border-b border-[var(--color-line)] pb-4 font-mono text-[0.65rem] uppercase tracking-[0.14em] text-[var(--color-ink-subtle)]">
               <span>build_profile</span>
               <span className="text-[var(--color-accent)]">01 / 04</span>

@@ -10,6 +10,7 @@ export const projects = [
     features: ['JWT-secured login', 'Role-based authorization', 'User search and filtering', 'Storage-usage analytics'],
     technologies: ['React.js', 'Tailwind CSS', 'Django REST Framework', 'JWT'],
     githubUrl: 'https://github.com/RashmiAbeysekera',
+    githubLabel: 'GitHub profile',
   },
   {
     number: '02',
@@ -22,6 +23,7 @@ export const projects = [
     features: ['Evidence uploads', 'Row-level security', 'Realtime incident feed', 'Photo and audio lightbox'],
     technologies: ['Next.js', 'React', 'Supabase Storage', 'Supabase Realtime'],
     githubUrl: 'https://github.com/RashmiAbeysekera',
+    githubLabel: 'GitHub profile',
   },
   {
     number: '03',
@@ -34,5 +36,6 @@ export const projects = [
     features: ['Installable PWA', 'JWT authentication', 'Live product search', 'Shopping cart'],
     technologies: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'PWA'],
     githubUrl: 'https://github.com/RashmiAbeysekera',
+    githubLabel: 'GitHub profile',
   },
 ]

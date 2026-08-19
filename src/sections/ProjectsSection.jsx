@@ -45,6 +45,7 @@ function ProjectsSection() {
               viewport={{ once: true, amount: 0.15 }}
               variants={heroReveal}
               transition={{ ...heroTransition, delay: index * 0.08 }}
+              whileHover={prefersReducedMotion ? undefined : { y: -4 }}
             >
               <div className="project-index">{project.number}</div>
               <div className="project-body">
@@ -59,7 +60,7 @@ function ProjectsSection() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Source code <span aria-hidden="true">↗</span>
+                    {project.githubLabel} <span aria-hidden="true">↗</span>
                   </a>
                 </div>
                 <p className="project-summary">{project.summary}</p>
