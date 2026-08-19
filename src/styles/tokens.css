@@ -1,0 +1,18 @@
+:root {
+  --color-canvas: #0a0d12;
+  --color-canvas-raised: #10151c;
+  --color-ink: #f2f5f4;
+  --color-ink-muted: #9aa8a6;
+  --color-ink-subtle: #657370;
+  --color-line: rgba(196, 220, 214, 0.14);
+  --color-line-strong: rgba(196, 220, 214, 0.26);
+  --color-accent: #8ee3bd;
+  --color-accent-soft: rgba(142, 227, 189, 0.12);
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+}
+
+@theme inline {
+  --font-sans: var(--font-display);
+  --font-mono: var(--font-code);
+}
