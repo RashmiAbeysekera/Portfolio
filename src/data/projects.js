@@ -1,6 +1,18 @@
 export const projects = [
   {
     number: '01',
+    title: 'Healthcare Monitoring System',
+    type: '1st Year Hardware Project · 2024–2025',
+    summary:
+      'An academic healthcare monitoring prototype combining sensor-based health measurements, AD8232 ECG monitoring, and a web-based dashboard for viewing current and historical data.',
+    contribution: 'ECG monitoring with the AD8232 sensor, with small frontend support using HTML, CSS, and JavaScript.',
+    features: ['6+ health parameters', 'AD8232 ECG sensor', 'Web monitoring dashboard'],
+    technologies: ['Healthcare', 'Embedded Systems', 'ECG', 'IoT', 'Web'],
+    href: '/projects/healthcare-monitoring-system',
+    linkLabel: 'View project',
+  },
+  {
+    number: '02',
     title: 'Cloud Storage Solution',
     type: 'Admin Management Module',
     summary:
@@ -13,7 +25,7 @@ export const projects = [
     githubLabel: 'GitHub repository',
   },
   {
-    number: '02',
+    number: '03',
     title: 'ResQAI',
     type: 'Emergency Response Platform · Team Hackathon',
     summary:
@@ -26,7 +38,7 @@ export const projects = [
     githubLabel: 'GitHub repository',
   },
   {
-    number: '03',
+    number: '04',
     title: '7°Skin',
     type: 'Skincare E-Commerce PWA',
     summary:

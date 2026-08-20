@@ -56,11 +56,11 @@ function ProjectsSection() {
                   </div>
                   <a
                     className="project-link"
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noreferrer"
+                    href={project.href || project.githubUrl}
+                    target={project.href ? undefined : '_blank'}
+                    rel={project.href ? undefined : 'noreferrer'}
                   >
-                    {project.githubLabel} <span aria-hidden="true">↗</span>
+                    {project.linkLabel || project.githubLabel} <span aria-hidden="true">↗</span>
                   </a>
                 </div>
                 <p className="project-summary">{project.summary}</p>

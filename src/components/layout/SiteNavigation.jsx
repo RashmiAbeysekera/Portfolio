@@ -10,6 +10,7 @@ function SiteNavigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
   const prefersReducedMotion = useReducedMotion()
+  const isProjectPage = window.location.pathname.startsWith('/projects/')
 
   useEffect(() => {
     const updateScrollState = () => setIsScrolled(window.scrollY > 24)
@@ -68,7 +69,7 @@ function SiteNavigation() {
         <nav className="flex h-[72px] items-center justify-between" aria-label="Primary navigation">
           <a
             className="font-mono text-sm font-semibold tracking-[0.08em] text-[var(--color-ink)] transition-colors hover:text-[var(--color-accent)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
-            href="#hero"
+            href={isProjectPage ? '/' : '#hero'}
           >
             rashmi<span className="text-[var(--color-accent)]">.</span>dev
           </a>
@@ -78,7 +79,7 @@ function SiteNavigation() {
               <a
                 className="text-sm font-medium text-[var(--color-ink-muted)] transition-colors hover:text-[var(--color-ink)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
                 data-active={activeSection === item.href.slice(1)}
-                href={item.href}
+                href={isProjectPage ? `/${item.href}` : item.href}
                 key={item.label}
                 onClick={(event) => handleNavigation(event, item.href)}
               >
@@ -121,7 +122,7 @@ function SiteNavigation() {
                 <a
                   className="rounded-md px-3 py-2 text-sm text-[var(--color-ink-muted)] transition-colors hover:bg-white/5 hover:text-[var(--color-ink)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]"
                   data-active={activeSection === item.href.slice(1)}
-                  href={item.href}
+                  href={isProjectPage ? `/${item.href}` : item.href}
                   key={item.label}
                   onClick={(event) => handleNavigation(event, item.href)}
                 >
