@@ -1,9 +1,23 @@
 import { motion } from 'motion/react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function ActivityItem({ activity, index, prefersReducedMotion }) {
   const [isActive, setIsActive] = useState(false)
+  const [lightboxImage, setLightboxImage] = useState(null)
   const side = index % 2 === 0 ? 'activity-item-left' : 'activity-item-right'
+
+  useEffect(() => {
+    if (!lightboxImage) return undefined
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setLightboxImage(null)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [lightboxImage])
 
   return (
     <motion.article
@@ -17,16 +31,46 @@ function ActivityItem({ activity, index, prefersReducedMotion }) {
     >
       <div className={`activity-node ${isActive ? 'activity-node-active' : ''}`} aria-hidden="true" />
       <div className="activity-content">
-        <span className={`activity-index ${isActive ? 'activity-index-active' : ''}`} aria-hidden="true">0{index + 1}</span>
-        <div className="activity-date">{activity.date}</div>
-        <h3>{activity.title}</h3>
-        {activity.result && <p className="activity-result">{activity.result}</p>}
-        {activity.role && <p className="activity-role">{activity.role}</p>}
-        {activity.team && <p className="activity-secondary">{activity.team}</p>}
-        {activity.organization && <p className="activity-secondary">{activity.organization}</p>}
-        {activity.contribution && <p className="activity-description">{activity.contribution}</p>}
-        <span className="activity-category">{activity.category}</span>
+        {activity.image && side === 'activity-item-left' && (
+          <button
+            type="button"
+            className="activity-media"
+            onClick={() => setLightboxImage({ src: activity.image, alt: activity.title })}
+            aria-label={`Open photo for ${activity.title}`}
+          >
+            <img src={activity.image} alt={activity.title} loading="lazy" />
+            <span className="activity-media-overlay">View moment <span aria-hidden="true">↗</span></span>
+          </button>
+        )}
+        <div className="activity-copy">
+          <span className={`activity-index ${isActive ? 'activity-index-active' : ''}`} aria-hidden="true">0{index + 1}</span>
+          <div className="activity-date">{activity.date}</div>
+          <h3>{activity.title}</h3>
+          {activity.result && <p className="activity-result">{activity.result}</p>}
+          {activity.role && <p className="activity-role">{activity.role}</p>}
+          {activity.team && <p className="activity-secondary">{activity.team}</p>}
+          {activity.organization && <p className="activity-secondary">{activity.organization}</p>}
+          {activity.contribution && <p className="activity-description">{activity.contribution}</p>}
+          <span className="activity-category">{activity.category}</span>
+        </div>
+        {activity.image && side === 'activity-item-right' && (
+          <button
+            type="button"
+            className="activity-media"
+            onClick={() => setLightboxImage({ src: activity.image, alt: activity.title })}
+            aria-label={`Open photo for ${activity.title}`}
+          >
+            <img src={activity.image} alt={activity.title} loading="lazy" />
+            <span className="activity-media-overlay">View moment <span aria-hidden="true">↗</span></span>
+          </button>
+        )}
       </div>
+      {lightboxImage && (
+        <div className="case-lightbox" role="dialog" aria-modal="true" aria-label="Activity image preview" onClick={() => setLightboxImage(null)}>
+          <button type="button" aria-label="Close image preview" onClick={() => setLightboxImage(null)}>×</button>
+          <img src={lightboxImage.src} alt={lightboxImage.alt} />
+        </div>
+      )}
     </motion.article>
   )
 }

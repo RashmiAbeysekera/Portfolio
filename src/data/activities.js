@@ -1,3 +1,9 @@
+import trofeo23 from '../assets/trofoe23.jpeg'
+import moraspirit from '../assets/activities/moraspirit.jpg'
+import coderush from '../assets/coderush.jpeg'
+import foresight from '../assets/foresight.jpeg'
+import moraxtreme from '../assets/moraxtreme.jpeg'
+
 export const activities = [
   {
     year: '2023',
@@ -6,6 +12,7 @@ export const activities = [
     organization: 'Matara District Engineering Professionals Association',
     contribution: "Coordinated and announced key proceedings for Trofeo '23, overseeing event operations and public communication for the cricket tournament.",
     category: 'Leadership · Event Operations',
+    image: trofeo23,
   },
   {
     year: '2024',
@@ -14,6 +21,7 @@ export const activities = [
     organization: 'Corporate Development Pillar',
     contribution: '1 year service',
     category: 'Volunteering',
+    image: moraspirit,
   },
   {
     year: '2024',
@@ -30,6 +38,7 @@ export const activities = [
     title: 'CodeRush',
     organization: 'INTECS',
     category: 'Competitive Programming Competition',
+    image: coderush,
   },
   {
     year: '2025',
@@ -37,6 +46,7 @@ export const activities = [
     title: 'MoraForesight 3.0',
     role: 'Delegate Handling Committee',
     category: 'Committee · Event Management',
+    image: foresight,
   },
   {
     year: '2025',
@@ -45,6 +55,7 @@ export const activities = [
     team: 'Team Nexio',
     organization: 'IEEE Student Branch',
     category: 'Algorithm Coding Competition',
+    image: moraxtreme,
   },
   {
     year: '2026',
