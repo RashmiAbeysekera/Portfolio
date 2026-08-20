@@ -38,7 +38,7 @@ function ProjectsSection() {
         <div className="projects-list">
           {projects.map((project, index) => (
             <motion.article
-              className="project-item"
+              className={`project-item${project.href ? ' project-item--linked' : ''}`}
               key={project.title}
               initial={initial}
               whileInView="visible"
@@ -47,6 +47,13 @@ function ProjectsSection() {
               transition={{ ...heroTransition, delay: index * 0.08 }}
               whileHover={prefersReducedMotion ? undefined : { y: -4 }}
             >
+              {project.href ? (
+                <a
+                  className="project-item-stretch-link"
+                  href={project.href}
+                  aria-label={`${project.linkLabel ?? 'View project'}: ${project.title}`}
+                />
+              ) : null}
               <div className="project-index">{project.number}</div>
               <div className="project-body">
                 <div className="project-heading-row">
@@ -59,8 +66,11 @@ function ProjectsSection() {
                     href={project.href || project.githubUrl}
                     target={project.href ? undefined : '_blank'}
                     rel={project.href ? undefined : 'noreferrer'}
+                    tabIndex={project.href ? -1 : undefined}
+                    aria-hidden={project.href ? true : undefined}
                   >
-                    {project.linkLabel || project.githubLabel} <span aria-hidden="true">↗</span>
+                    {project.linkLabel || project.githubLabel}{' '}
+                    {!project.href ? <span aria-hidden="true">↗</span> : null}
                   </a>
                 </div>
                 <p className="project-summary">{project.summary}</p>

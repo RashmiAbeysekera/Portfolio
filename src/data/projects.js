@@ -40,14 +40,14 @@ export const projects = [
   {
     number: '04',
     title: '7°Skin',
-    type: 'Skincare E-Commerce PWA',
+    type: 'Full-Stack MERN PWA E-Commerce Platform · 2025–2026',
     summary:
-      'A full-stack MERN progressive web app for responsive skincare product discovery and shopping.',
+      'A production-style luxury skincare e-commerce platform combining a MERN backend, installable PWA architecture, PayHere checkout, and a mobile-first Sri Lankan-inspired brand experience.',
     contribution:
-      'Built the full-stack application with JWT authentication, responsive Tailwind CSS UI, live product search, filters, shopping cart, and installable offline-capable behavior.',
-    features: ['Installable PWA', 'JWT authentication', 'Live product search', 'Shopping cart'],
-    technologies: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'PWA'],
-    githubUrl: 'https://github.com/RashmiAbeysekera/Skin-care-Project-MERN-PWA',
-    githubLabel: 'GitHub repository',
+      'Built the full-stack application with JWT authentication, responsive Tailwind CSS UI, live product search, filters, shopping cart, PayHere payment integration, and installable offline-capable behavior.',
+    features: ['Installable PWA', 'Live product search', 'PayHere checkout', 'Mobile-first UI'],
+    technologies: ['MERN', 'PWA', 'E-Commerce', 'PayHere', 'MongoDB'],
+    href: '/projects/7skin',
+    linkLabel: 'View case study →',
   },
 ]

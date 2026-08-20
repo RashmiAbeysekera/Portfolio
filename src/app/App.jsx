@@ -10,9 +10,11 @@ import BeyondClassroomSection from '../sections/BeyondClassroomSection'
 import GithubSection from '../sections/GithubSection'
 import SiteFooter from '../components/layout/SiteFooter'
 import HealthcareMonitoringSystem from '../pages/HealthcareMonitoringSystem'
+import SevenSkin from '../pages/SevenSkin'
 
 function App() {
   const isHealthcareProject = window.location.pathname === '/projects/healthcare-monitoring-system'
+  const isSevenSkinProject = window.location.pathname === '/projects/7skin'
 
   return (
     <div className="min-h-screen bg-[var(--color-canvas)] text-[var(--color-ink)]">
@@ -21,6 +23,8 @@ function App() {
         <a className="skip-link" href="#main-content">Skip to main content</a>
         {isHealthcareProject ? (
           <main id="main-content"><HealthcareMonitoringSystem /></main>
+        ) : isSevenSkinProject ? (
+          <main id="main-content"><SevenSkin /></main>
         ) : (
           <main id="main-content">
             <HeroSection />
