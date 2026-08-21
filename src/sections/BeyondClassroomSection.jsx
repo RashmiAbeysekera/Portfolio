@@ -4,6 +4,15 @@ import PageContainer from '../components/layout/PageContainer'
 import ActivityTimeline from '../components/activities/ActivityTimeline'
 import { activities } from '../data/activities'
 import useReducedMotion from '../hooks/useReducedMotion'
+import badge1 from '../assets/badge1.webp'
+import badge2 from '../assets/badge2.webp'
+import badge3 from '../assets/badge3.webp'
+
+const badges = [
+  { src: badge1, alt: 'Achievement badge 1' },
+  { src: badge2, alt: 'Achievement badge 2' },
+  { src: badge3, alt: 'Achievement badge 3' },
+]
 
 function BeyondClassroomSection() {
   const prefersReducedMotion = useReducedMotion()
@@ -45,6 +54,21 @@ function BeyondClassroomSection() {
           >
             <ActivityTimeline activities={visibleActivities} prefersReducedMotion={prefersReducedMotion} />
           </motion.div>
+
+          <div className="recognition-block">
+            <p className="recognition-kicker">Recognition / Achievements</p>
+            <div className="recognition-grid">
+              {badges.map((badge) => (
+                <motion.div
+                  className="recognition-card"
+                  key={badge.alt}
+                  whileHover={prefersReducedMotion ? undefined : { y: -3 }}
+                >
+                  <img src={badge.src} alt={badge.alt} loading="lazy" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
       </PageContainer>
     </section>
   )

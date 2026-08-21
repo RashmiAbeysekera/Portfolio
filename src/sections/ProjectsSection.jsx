@@ -38,7 +38,7 @@ function ProjectsSection() {
         <div className="projects-list">
           {projects.map((project, index) => (
             <motion.article
-              className={`project-item${project.href ? ' project-item--linked' : ''}`}
+              className={`project-item${project.href ? ' project-item--linked' : ''}${project.githubUrl ? ' project-item--has-github' : ''}`}
               key={project.title}
               initial={initial}
               whileInView="visible"
@@ -54,6 +54,20 @@ function ProjectsSection() {
                   aria-label={`${project.linkLabel ?? 'View project'}: ${project.title}`}
                 />
               ) : null}
+              {project.githubUrl ? (
+                <a
+                  className="project-github-link"
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${project.githubLabel ?? 'View source code'} for ${project.title} on GitHub`}
+                  onClick={(event) => event.stopPropagation()}
+                >
+                  <svg viewBox="0 0 19 19" aria-hidden="true" focusable="false">
+                    <use href="/icons.svg#github-icon" />
+                  </svg>
+                </a>
+              ) : null}
               <div className="project-index">{project.number}</div>
               <div className="project-body">
                 <div className="project-heading-row">
@@ -61,17 +75,16 @@ function ProjectsSection() {
                     <p className="project-type">{project.type}</p>
                     <h3 className="project-title">{project.title}</h3>
                   </div>
-                  <a
-                    className="project-link"
-                    href={project.href || project.githubUrl}
-                    target={project.href ? undefined : '_blank'}
-                    rel={project.href ? undefined : 'noreferrer'}
-                    tabIndex={project.href ? -1 : undefined}
-                    aria-hidden={project.href ? true : undefined}
-                  >
-                    {project.linkLabel || project.githubLabel}{' '}
-                    {!project.href ? <span aria-hidden="true">↗</span> : null}
-                  </a>
+                  {project.href ? (
+                    <a
+                      className="project-link"
+                      href={project.href}
+                      tabIndex={-1}
+                      aria-hidden="true"
+                    >
+                      {project.linkLabel ?? 'View project'}
+                    </a>
+                  ) : null}
                 </div>
                 <p className="project-summary">{project.summary}</p>
                 <p className="project-contribution">

@@ -34,6 +34,8 @@ export const projects = [
       'Architected and built the citizen SOS evidence pipeline, validated upload flow, Supabase security policies, live incident feed, and photo/audio evidence viewer.',
     features: ['Evidence uploads', 'Row-level security', 'Realtime incident feed', 'Photo and audio lightbox'],
     technologies: ['Next.js', 'React', 'Supabase Storage', 'Supabase Realtime'],
+    href: '/projects/resqai',
+    linkLabel: 'View case study →',
     githubUrl: 'https://github.com/Sahas-sass/ResQAI-web',
     githubLabel: 'GitHub repository',
   },
@@ -49,5 +51,7 @@ export const projects = [
     technologies: ['MERN', 'PWA', 'E-Commerce', 'PayHere', 'MongoDB'],
     href: '/projects/7skin',
     linkLabel: 'View case study →',
+    githubUrl: 'https://github.com/RashmiAbeysekera/Skin-care-Project-MERN-PWA',
+    githubLabel: 'GitHub repository',
   },
 ]
