@@ -1,7 +1,7 @@
 # Rashmi Abeysekera — Portfolio
 
 Personal software engineering portfolio built with React and Vite. Live at
-**[portfolio-psi-wheat-25.vercel.app](https://portfolio-psi-wheat-25.vercel.app/)**.
+**[portfolio-psi-wheat-25.vercel.app]**.
 
 ## About
 
