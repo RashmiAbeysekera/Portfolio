@@ -14,10 +14,13 @@ import SevenSkin from '../pages/SevenSkin'
 import ResQAI from '../pages/ResQAI'
 import SheRest from '../pages/SheRest'
 import RepoPilot from '../pages/RepoPilot'
+import CloudStorageSolution from '../pages/CloudStorageSolution'
 
 function App() {
   const currentPath = window.location.pathname.replace(/\/+$/, '') || '/'
   const isRepoPilotProject = currentPath === '/projects/repopilot'
+  const isCloudStorageProject =
+    currentPath === '/projects/cloud-storage-solution' || currentPath === '/projects/ceynoa'
   const isHealthcareProject = currentPath === '/projects/healthcare-monitoring-system'
   const isSevenSkinProject = currentPath === '/projects/7skin'
   const isResQAIProject = currentPath === '/projects/resqai'
@@ -30,6 +33,8 @@ function App() {
         <a className="skip-link" href="#main-content">Skip to main content</a>
         {isRepoPilotProject ? (
           <main id="main-content"><RepoPilot /></main>
+        ) : isCloudStorageProject ? (
+          <main id="main-content"><CloudStorageSolution /></main>
         ) : isHealthcareProject ? (
           <main id="main-content"><HealthcareMonitoringSystem /></main>
         ) : isSevenSkinProject ? (
