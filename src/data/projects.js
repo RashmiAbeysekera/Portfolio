@@ -19,18 +19,6 @@ export const projects = [
   },
   {
     number: '02',
-    title: 'Healthcare Monitoring System',
-    type: '1st Year Hardware Project · 2024–2025',
-    summary:
-      'An academic healthcare monitoring prototype combining sensor-based health measurements, AD8232 ECG monitoring, and a web-based dashboard for viewing current and historical data.',
-    contribution: 'ECG monitoring with the AD8232 sensor, with small frontend support using HTML, CSS, and JavaScript.',
-    features: ['6+ health parameters', 'AD8232 ECG sensor', 'Web monitoring dashboard'],
-    technologies: ['Healthcare', 'Embedded Systems', 'ECG', 'IoT', 'Web'],
-    href: '/projects/healthcare-monitoring-system',
-    linkLabel: 'View project',
-  },
-  {
-    number: '03',
     title: 'Cloud Storage Solution',
     type: 'Admin Management Module',
     summary:
@@ -43,7 +31,7 @@ export const projects = [
     githubLabel: 'GitHub repository',
   },
   {
-    number: '04',
+    number: '03',
     title: 'ResQAI',
     type: 'Emergency Response Platform · Team Hackathon',
     summary:
@@ -58,7 +46,7 @@ export const projects = [
     githubLabel: 'GitHub repository',
   },
   {
-    number: '05',
+    number: '04',
     title: '7°Skin',
     type: 'Full-Stack MERN PWA E-Commerce Platform · 2025–2026',
     summary:
@@ -73,7 +61,7 @@ export const projects = [
     githubLabel: 'GitHub repository',
   },
   {
-    number: '06',
+    number: '05',
     title: 'SheRest',
     type: 'Ongoing · Ideathon Proposal',
     tagline: 'A Safe Haven for Every Woman',
@@ -90,5 +78,17 @@ export const projects = [
     technologies: ['UI/UX Design', 'Figma', 'AI-Assisted', "Women's Safety", 'Mental Well-being'],
     href: '/projects/sherest',
     linkLabel: 'View case study →',
+  },
+  {
+    number: '06',
+    title: 'Healthcare Monitoring System',
+    type: '1st Year Hardware Project · 2024–2025',
+    summary:
+      'An academic healthcare monitoring prototype combining sensor-based health measurements, AD8232 ECG monitoring, and a web-based dashboard for viewing current and historical data.',
+    contribution: 'ECG monitoring with the AD8232 sensor, with small frontend support using HTML, CSS, and JavaScript.',
+    features: ['6+ health parameters', 'AD8232 ECG sensor', 'Web monitoring dashboard'],
+    technologies: ['Healthcare', 'Embedded Systems', 'ECG', 'IoT', 'Web'],
+    href: '/projects/healthcare-monitoring-system',
+    linkLabel: 'View project',
   },
 ]

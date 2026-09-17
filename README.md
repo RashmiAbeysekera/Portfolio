@@ -16,12 +16,12 @@ activities.
   controlled agentic code investigation, and event-driven GitHub synchronization.
 - **[7°Skin](https://portfolio-psi-wheat-25.vercel.app/projects/7skin)** — Full-stack MERN PWA
   e-commerce platform.
-- **[Healthcare Monitoring System](https://portfolio-psi-wheat-25.vercel.app/projects/healthcare-monitoring-system)**
 - **[ResQAI](https://portfolio-psi-wheat-25.vercel.app/projects/resqai)** — AI-powered emergency
   response coordination platform (team project; case study covers my contribution to the SOS
   media/storage and live operator evidence feed).
 - **[SheRest](https://portfolio-psi-wheat-25.vercel.app/projects/sherest)** — A safe haven for every woman;
   ongoing digital sanctuary ideathon proposal (Team Nexio, Artemia 1.0).
+- **[Healthcare Monitoring System](https://portfolio-psi-wheat-25.vercel.app/projects/healthcare-monitoring-system)**
 
 ## Tech stack
 
