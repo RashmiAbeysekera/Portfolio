@@ -20,13 +20,16 @@ export const projects = [
   {
     number: '02',
     title: 'Cloud Storage Solution',
-    type: 'Admin Management Module',
+    type: 'Admin Management Module · ServerSalad Collaboration',
     summary:
-      'A secure admin dashboard for managing users and monitoring storage usage across a cloud storage platform.',
+      'A secure administrative cockpit and management module for CEYNOA cloud storage, featuring JWT authentication, role-based access control, user lifecycle moderation, and multi-dimensional storage analytics.',
     contribution:
-      'Built the React and Tailwind CSS admin dashboard, including JWT login, role-based authorization, user management, analytics, and Axios integration with Django REST APIs.',
-    features: ['JWT-secured login', 'Role-based authorization', 'User search and filtering', 'Storage-usage analytics'],
-    technologies: ['React.js', 'Tailwind CSS', 'Django REST Framework', 'JWT'],
+      'Engineered the React and Tailwind CSS admin dashboard, including JWT login, HasAdminPermission RBAC authorization, user management, storage quota tracking, Axios interceptors, and data visualization with Django REST APIs.',
+    features: ['JWT-secured login', 'Role-based authorization (RBAC)', 'User search & moderation', 'Storage-usage analytics'],
+    technologies: ['React.js', 'Tailwind CSS', 'Django REST Framework', 'JWT', 'Analytics'],
+    href: '/projects/cloud-storage-solution',
+    linkLabel: 'View project',
+    demoUrl: 'https://software-project-storage-solution.vercel.app/',
     githubUrl: 'https://github.com/chirath1231/Software-Project-Storage-Solution',
     githubLabel: 'GitHub repository',
   },
