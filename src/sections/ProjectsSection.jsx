@@ -51,6 +51,8 @@ function ProjectsSection() {
                 <a
                   className="project-item-stretch-link"
                   href={project.href}
+                  target={project.href.startsWith('http') ? '_blank' : undefined}
+                  rel={project.href.startsWith('http') ? 'noreferrer' : undefined}
                   aria-label={`${project.linkLabel ?? 'View project'}: ${project.title}`}
                 />
               ) : null}
@@ -87,10 +89,12 @@ function ProjectsSection() {
                   ) : null}
                 </div>
                 <p className="project-summary">{project.summary}</p>
-                <p className="project-contribution">
-                  <span>My contribution</span>
-                  {project.contribution}
-                </p>
+                {project.contribution ? (
+                  <p className="project-contribution">
+                    <span>My contribution</span>
+                    {project.contribution}
+                  </p>
+                ) : null}
                 <div className="project-feature-row">
                   {project.features.map((feature) => (
                     <span key={feature}>{feature}</span>

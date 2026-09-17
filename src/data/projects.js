@@ -1,6 +1,24 @@
 export const projects = [
   {
     number: '01',
+    title: 'RepoPilot',
+    type: 'AI-Powered Repository Intelligence Assistant · Solo Project',
+    summary:
+      'An AI-powered developer assistant that helps engineers explore unfamiliar GitHub codebases through natural-language interaction, combining end-to-end RAG, pgvector semantic search, grounded Gemini explanations, and automated GitHub synchronization.',
+    features: [
+      'RAG & pgvector Semantic Search',
+      'Controlled Agentic Investigation',
+      'Incremental GitHub Webhook Sync',
+      'Source-Traceable Explanations',
+    ],
+    technologies: ['FastAPI', 'PostgreSQL & pgvector', 'RAG', 'Gemini API', 'React', 'Docker'],
+    href: '/projects/repopilot',
+    linkLabel: 'View project',
+    githubUrl: 'https://github.com/RashmiAbeysekera/RepoPilot',
+    githubLabel: 'GitHub repository',
+  },
+  {
+    number: '02',
     title: 'Healthcare Monitoring System',
     type: '1st Year Hardware Project · 2024–2025',
     summary:
@@ -12,7 +30,7 @@ export const projects = [
     linkLabel: 'View project',
   },
   {
-    number: '02',
+    number: '03',
     title: 'Cloud Storage Solution',
     type: 'Admin Management Module',
     summary:
@@ -25,7 +43,7 @@ export const projects = [
     githubLabel: 'GitHub repository',
   },
   {
-    number: '03',
+    number: '04',
     title: 'ResQAI',
     type: 'Emergency Response Platform · Team Hackathon',
     summary:
@@ -40,7 +58,7 @@ export const projects = [
     githubLabel: 'GitHub repository',
   },
   {
-    number: '04',
+    number: '05',
     title: '7°Skin',
     type: 'Full-Stack MERN PWA E-Commerce Platform · 2025–2026',
     summary:
@@ -53,5 +71,24 @@ export const projects = [
     linkLabel: 'View case study →',
     githubUrl: 'https://github.com/RashmiAbeysekera/Skin-care-Project-MERN-PWA',
     githubLabel: 'GitHub repository',
+  },
+  {
+    number: '06',
+    title: 'SheRest',
+    type: 'Ongoing · Ideathon Proposal',
+    tagline: 'A Safe Haven for Every Woman',
+    summary:
+      "An ongoing digital sanctuary designed to support women's safety, legal guidance, emotional well-being, and access to trusted support through AI-assisted and human-centered experiences.",
+    contribution:
+      'Ideathon proposal and product concept developed with Team Nexio for Artemia 1.0 (IEEE SB, USJ). Focused on user flows, empathetic UX, and privacy-first safety architecture.',
+    features: [
+      'AI Legal & Safety Chatbot',
+      'Mental Health Consultation',
+      'Guided Meditation & Healing',
+      'Emergency Help Panel',
+    ],
+    technologies: ['UI/UX Design', 'Figma', 'AI-Assisted', "Women's Safety", 'Mental Well-being'],
+    href: '/projects/sherest',
+    linkLabel: 'View case study →',
   },
 ]
