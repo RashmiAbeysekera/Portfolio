@@ -944,6 +944,251 @@ a {
 }
 
 /* ==========================================================================
+   CEYNOA Cloud Storage Solution Case Study Styles
+   ========================================================================== */
+.case-study--cloud-storage .case-hero-grid {
+  align-items: start;
+}
+
+.case-study--cloud-storage .case-image-button img {
+  object-fit: contain;
+  background: #0b0f19;
+}
+
+.cloud-inline-code {
+  display: inline-block;
+  font-family: var(--font-code);
+  font-size: 0.8em;
+  padding: 0.15rem 0.4rem;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 4px;
+  color: #38bdf8;
+}
+
+.cloud-rbac-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cloud-rbac-card {
+  border: 1px solid var(--color-line);
+  background: var(--color-canvas);
+  padding: 1.75rem;
+  border-radius: 0.5rem;
+}
+
+.cloud-rbac-card h3 {
+  font-size: 1.15rem;
+  color: var(--color-ink);
+  margin-bottom: 0.5rem;
+}
+
+.cloud-rbac-card p {
+  font-size: 0.85rem;
+  color: var(--color-ink-muted);
+  margin-bottom: 1.25rem;
+}
+
+.cloud-permission-tags {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.cloud-perm-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+}
+
+.cloud-perm-code {
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  color: #38bdf8;
+  white-space: nowrap;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+}
+
+.cloud-perm-desc {
+  font-size: 0.8rem;
+  color: var(--color-ink-muted);
+}
+
+.cloud-roles-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.cloud-role-item {
+  border-left: 2px solid #38bdf8;
+  padding-left: 0.9rem;
+}
+
+.cloud-role-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.cloud-role-header strong {
+  font-size: 0.9rem;
+  color: var(--color-ink);
+}
+
+.cloud-role-badge {
+  font-size: 0.65rem;
+  font-family: var(--font-code);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+}
+
+.cloud-role-item p {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--color-ink-muted);
+  line-height: 1.5;
+}
+
+/* Analytics Row - CRITICAL USER REQUIREMENT: Graph images in a row */
+.cloud-analytics-row-header {
+  margin-bottom: 2rem;
+}
+
+.cloud-analytics-subtitle {
+  color: var(--color-ink-muted);
+  font-size: 0.92rem;
+  margin-top: 0.5rem;
+  max-width: 48rem;
+  line-height: 1.6;
+}
+
+.cloud-analytics-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+  margin-bottom: 2.5rem;
+}
+
+.cloud-graph-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-line);
+  background: var(--color-canvas);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cloud-graph-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.4);
+}
+
+.cloud-graph-media .case-image-button {
+  height: 14rem;
+  width: 100%;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.cloud-graph-media .case-image-button img {
+  object-fit: contain;
+  background: #090d16;
+}
+
+.cloud-graph-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cloud-graph-tag {
+  font-family: var(--font-code);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #38bdf8;
+  margin-bottom: 0.4rem;
+}
+
+.cloud-graph-body h4 {
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  margin: 0 0 0.45rem;
+  line-height: 1.4;
+}
+
+.cloud-graph-body p {
+  font-size: 0.8rem;
+  color: var(--color-ink-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cloud-chart-types-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.cloud-chart-type-box {
+  border: 1px solid var(--color-line);
+  padding: 1.25rem;
+  border-radius: 0.35rem;
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.cloud-chart-type-icon {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.cloud-chart-type-box h4 {
+  margin: 0 0 0.35rem;
+  font-size: 0.92rem;
+  color: var(--color-ink);
+}
+
+.cloud-chart-type-box p {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--color-ink-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 960px) {
+  .cloud-analytics-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .cloud-graph-media .case-image-button {
+    height: 18rem;
+  }
+  .cloud-rbac-grid {
+    grid-template-columns: 1fr;
+  }
+  .cloud-chart-types-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    SheRest Case Study Styles
    ========================================================================== */
 .case-study--sherest {
