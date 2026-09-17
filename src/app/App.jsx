@@ -12,23 +12,32 @@ import SiteFooter from '../components/layout/SiteFooter'
 import HealthcareMonitoringSystem from '../pages/HealthcareMonitoringSystem'
 import SevenSkin from '../pages/SevenSkin'
 import ResQAI from '../pages/ResQAI'
+import SheRest from '../pages/SheRest'
+import RepoPilot from '../pages/RepoPilot'
 
 function App() {
-  const isHealthcareProject = window.location.pathname === '/projects/healthcare-monitoring-system'
-  const isSevenSkinProject = window.location.pathname === '/projects/7skin'
-  const isResQAIProject = window.location.pathname === '/projects/resqai'
+  const currentPath = window.location.pathname.replace(/\/+$/, '') || '/'
+  const isRepoPilotProject = currentPath === '/projects/repopilot'
+  const isHealthcareProject = currentPath === '/projects/healthcare-monitoring-system'
+  const isSevenSkinProject = currentPath === '/projects/7skin'
+  const isResQAIProject = currentPath === '/projects/resqai'
+  const isSheRestProject = currentPath === '/projects/sherest'
 
   return (
     <div className="min-h-screen bg-[var(--color-canvas)] text-[var(--color-ink)]">
       <SiteNavigation />
       <PageTransition>
         <a className="skip-link" href="#main-content">Skip to main content</a>
-        {isHealthcareProject ? (
+        {isRepoPilotProject ? (
+          <main id="main-content"><RepoPilot /></main>
+        ) : isHealthcareProject ? (
           <main id="main-content"><HealthcareMonitoringSystem /></main>
         ) : isSevenSkinProject ? (
           <main id="main-content"><SevenSkin /></main>
         ) : isResQAIProject ? (
           <main id="main-content"><ResQAI /></main>
+        ) : isSheRestProject ? (
+          <main id="main-content"><SheRest /></main>
         ) : (
           <main id="main-content">
             <HeroSection />
