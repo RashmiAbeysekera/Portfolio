@@ -14,6 +14,9 @@ activities.
 - **[RepoPilot](https://portfolio-psi-wheat-25.vercel.app/projects/repopilot)** — AI-powered repository
   intelligence assistant with end-to-end RAG, pgvector semantic search, grounded Gemini responses,
   controlled agentic code investigation, and event-driven GitHub synchronization.
+- **[Cloud Storage Solution (CEYNOA)](https://portfolio-psi-wheat-25.vercel.app/projects/cloud-storage-solution)** — Secure
+  admin management cockpit and analytics module with Django REST Framework, JWT auth, fine-grained RBAC,
+  and multi-dimensional visual storage analytics (developed in collaboration with ServerSalad).
 - **[7°Skin](https://portfolio-psi-wheat-25.vercel.app/projects/7skin)** — Full-stack MERN PWA
   e-commerce platform.
 - **[ResQAI](https://portfolio-psi-wheat-25.vercel.app/projects/resqai)** — AI-powered emergency
