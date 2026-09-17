@@ -45,7 +45,7 @@ function AboutSection() {
             transition={{ ...heroTransition, delay: 0.12 }}
           >
             <p>
-              I&apos;m a second-year Information Technology undergraduate at the {profile.university},
+              I&apos;m a third-year Information Technology undergraduate at the {profile.university},
               pursuing a {profile.program} as part of Batch &apos;23.
             </p>
             <p>
