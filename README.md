@@ -11,12 +11,17 @@ activities.
 
 ## Case studies
 
+- **[RepoPilot](https://portfolio-psi-wheat-25.vercel.app/projects/repopilot)** — AI-powered repository
+  intelligence assistant with end-to-end RAG, pgvector semantic search, grounded Gemini responses,
+  controlled agentic code investigation, and event-driven GitHub synchronization.
 - **[7°Skin](https://portfolio-psi-wheat-25.vercel.app/projects/7skin)** — Full-stack MERN PWA
   e-commerce platform.
 - **[Healthcare Monitoring System](https://portfolio-psi-wheat-25.vercel.app/projects/healthcare-monitoring-system)**
 - **[ResQAI](https://portfolio-psi-wheat-25.vercel.app/projects/resqai)** — AI-powered emergency
   response coordination platform (team project; case study covers my contribution to the SOS
   media/storage and live operator evidence feed).
+- **[SheRest](https://portfolio-psi-wheat-25.vercel.app/projects/sherest)** — A safe haven for every woman;
+  ongoing digital sanctuary ideathon proposal (Team Nexio, Artemia 1.0).
 
 ## Tech stack
 
@@ -44,7 +49,7 @@ src/
   assets/         # images used across projects and case studies
   components/     # shared layout, activity, and UI components
   data/           # project, profile, education, and activity data
-  pages/          # full case-study pages (SevenSkin, HealthcareMonitoringSystem, ResQAI)
+  pages/          # full case-study pages (RepoPilot, SevenSkin, HealthcareMonitoringSystem, ResQAI, SheRest)
   sections/       # homepage sections (Hero, Projects, About, Contact, etc.)
   styles/         # design tokens
   index.css       # global styles and design system
